@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website</title>
+<!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+<!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- This is the main header section with title and create button -->
+    <header>
+        <div>
+            <h1 id="headerHead">Blogging Website</h1>
+        </div>  
+        <div>
+            <button id="createBtn" ><P>Create New Post</P></button>
+        </div>     
+    </header>
+   
+    <!-- This is the modal that gets displayed when user clicks on create a new post button -->
+    <div id="modal" class="modal" style="position: absolute; top:25%;">
+
+       <div class="modal-content" style="display: flex; justify-content: center;flex-direction: column;">
+               <!-- POPUP MODAL  -->
+               <div style="display: flex; justify-content:space-between;
+                align-items:center; flex-direction: row;">                
+                    <div>
+                        <h2 id="mainHead">Create Post</h2> 
+                    </div>
+                    <div style="padding-right: 10px;">
+                        <span class="close">&times;</span>
+                    </div>   
+                </div>    
+                <!-- POPUP FORM IN MODAL -->
+                <form id="postForm" >
+                    <div style="border: 10px; margin: 10px;"> 
+                            <input type="text" id="title" name="title" required placeholder="Enter Your Heading...." style="width: 90%; font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 24px;" >
+                    </div>
+                    <div style="border: 10px; margin: 10px;">       
+                            <textarea id="content" name="content" required placeholder="Enter Your Blog Post...." style="width: 90%;font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 24px;"></textarea>
+                    </div>
+                    <div style="border: 10px; margin: 10px;">
+                        <div >
+                            <!-- buttons for crud operations of Blog posts -->
+                             <!-- Publish button -->
+                                    <button 
+                                        id="btn-create"
+                                        type="submit" 
+                                        class ="btn1"
+                                        style="
+                                            font-family: 'Inter';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 24px;
+                                            color: #333333;
+                                            width: 253px;
+                                            height: 59px;
+                                            border: 1px solid #333333;">
+                                    Publish Post
+                                    </button>
+
+                                    <!-- cancel post button -->
+                                    <button 
+                                    class="btn2"
+                                        id="btn-cancel-modal"
+                                        type="cancel" 
+                                        style="
+                                            font-family: 'Inter';
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 24px;
+                                            color: #333333;
+                                            width: 253px;
+                                            height: 59px;
+                                            margin-left: 10px;       
+                                            border: 1px solid #333333;">
+                                    Cancel Post
+                                    </button>
+                        </div>
+
+
+                        <div>
+                            <!-- save changes after edit -->
+                                    <button 
+                                    class="btn3"
+                                    id="button-save-changes"
+                                    type="submit" 
+                                    style="
+                                        display: none;
+                                        font-family: 'Inter';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 24px;
+                                        color: #333333;
+                                        width: 253px;
+                                        height: 59px;
+                                        border: 1px solid #333333;">
+                                Save Post
+                                </button>
+
+                                <!-- Delete the post -->
+                                <button 
+                                    id="button-delete-modal"
+                                    type="cancel" 
+                                    style="
+                                        display: none;
+                                        font-family: 'Inter';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 24px;
+                                        color: #333333;
+                                        width: 253px;
+                                        height: 59px;
+                                        margin-left: 10px;       
+                                        border: 1px solid #333333;">
+                                Delete Post
+                                </button>
+                        </div>
+                     
+                     
+                       
+                    </div>
+                 </form>
+        </div>
+    </div>
+    
+    <!-- For Pushing and displaying created content -->
+    <div id="posts">
+        
+    </div>
+<!-- Javascript link -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>
