@@ -1,4 +1,4 @@
-# AccioJob-3-march-contest
+# Blogging-website
 
 Development of a simple blogging website which allow users to create, edit, and delete blog posts.
 
